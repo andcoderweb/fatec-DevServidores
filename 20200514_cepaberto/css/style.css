@@ -1,0 +1,21 @@
+/*  
+  @DESCRIPTION: FATEC São Roque - 2019 - PROJETO INTEGRADOR II: página de estilo em castata para edição dos elementos visuais do Portal em geral.
+  @AUTHOR: ANDERSON NASCIMENTO / GABRIEL SHIRAI / FERNANDO ZARA / LUCAS / MARCELO FERNANDO / ISMAEL ESPÍNDOLA / VINÍCIUS LESSA.
+  @VERSION: 1.0.
+  @DATE: FATEC São Roque - 2019 - PROJETO INTEGRADOR II: página de estilo em castata para edição dos elementos visuais do Portal em geral.
+  @OBS: NIL.
+______________________________________________________________________________________________________________________________
+
+=========================================== CSS GERAL ===========================================
+
+
+
+/*=================== BODY ===================*/
+
+@import url('https://fonts.googleapis.com/css?family=Lora|Oswald&display=swap');
+
+body { width: 100%;
+       background-color: #114774;
+     }
+
+     

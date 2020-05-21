@@ -1,0 +1,157 @@
+<!DOCTYPE <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html> <!--<![endif]-->
+    <head>
+        <!-- META DADOS -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>DADOS - Remuneração dos Servidore Públicos</title>
+        <meta name="description" content="Página de Demonstração de dados da Remunerção dos Servidores Públicos - FATEC SÃO ROQUE - 2019 3º SEMESTRE - SISTEMAS PARA INTERNET - BANCO DE DADOS I">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Language" content="pt-br">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+        
+        <!-- CSS padrão -->
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!-- Favicon -->
+        <link rel="icon" href="favicon.png">
+
+        <!-- SCRIPTS -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/bootstrap.min.js"></script>
+        <!--  JS - LOADING-->        
+        <script type="text/javascript" src="scripts/loading-bar.js"></script>
+        
+        <script type="text/javascript">
+        // Empty
+    
+        </script>
+    </head>
+    <body>
+        <nav>
+        </nav>
+        <div class="container">
+            <div class="main">
+                <div class="row">
+                    <div class="col-12 text-center mt-4">
+                        <h2><strong>REMUNERAÇÃO - SERVIDORES PÚBLICOS DO ESTADO DE SÃO PAULO</strong></h2>
+                        <h3>CONSULTA DE DADOS</h3>
+                    </div>
+                </div>
+
+                <!-- FORM THAT MAKE A REQUIRE TO DATABASE -->                
+                <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>" class="ml-5 mr-5 mb-0">
+                    <div class="form-group">
+                        <label class="letra">Servidor Público</label>
+                        <input type="text" name="nome" class="form-control" id="" placeholder="Ex: Pedro" required>
+                        <small id="" class="form-text text-muted letra2">Digite aqui o nome do respectivo SERVIDOR PÚBLICO</small>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="letra">Órgão</label>
+                                <input type="text" name="orgao" class="form-control" id="" placeholder="Ex: CEETEPS (Centro Paula Souza)" required>
+                                <small id="" class="form-text text-muted letra2">Digite aqui o ÓRGÃO</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="letra">Cargo</label>
+                                <input type="text" name="cargo" class="form-control" id="" placeholder="Ex: Professor">
+                                <small id="" class="form-text text-muted letra2">Digite aqui o cargo do SERVIDOR PÚBLICO</small>
+                            </div>
+                        </div>                                                
+                        <input type="submit" name="Buscar" class="btn btn-primary btn-lg btn-block m-1 input-bot" value="Buscar">
+                    </div>
+                </form>
+                <!-- Hidden form to Clear the Search -->
+                <form class=" mt-0 ml-5 mr-5">
+                    <div class="row">
+                        <input type="submit" name="Limpar" class="btn btn-danger btn-lg btn-block m-1 input-bot" value="Limpar" >
+                    </div>
+                </form>
+                <article class='mb-3'>                
+                    <div class="row">
+                        <div class="col mt-4 ml-2 mr-2">
+                            <hr class="bg-black">
+                            <h3 class="text-center mt-5 mb-4 letra"><strong>Remuneração - SERVIDORES PÚBLICOS - 2019</strong></h3>
+                        </div>                    
+                    </div>                    
+                    <div class="row">                    
+                        <div class='col-12 mb-4'>
+                            <div class='row'>
+                                <div class="col-md-8">                                    
+                                    <div class="card h-100 ml-3">                                        
+                                        <div id="loader01"></div>
+                                        <div id="piechart02" class="h-100">
+                                    </div>
+                                    </div>
+                                </div>           
+                                <div class="col-4">
+                                    <div class="list-group mb-0 mr-3 h-100">
+                                        <a class="list-group-item list-group-item-action active letra2">LINKS PARA MAIS INFORMAÇÕES</a>
+                                        <a href="http://www.fatecsp.br/" class="list-group-item list-group-item-action letra2">Informativos FATEC</a>
+                                        <a href="https://www.cps.sp.gov.br/" class="list-group-item list-group-item-action letra2">Informativos Centro Paula Souza</a>
+                                        <a href="http://www.portaltransparencia.gov.br/" class="list-group-item list-group-item-action letra2">Portal Transparência</a>
+                                        <!-- <a href="http://www.saopaulo.sp.gov.br/" class="list-group-item list-group-item-action">Demais Informativos</a> -->
+                                    
+                                        <div class="card mt-4">
+                                            <img class="card-img-top p-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQYwBDOZWd8IsHUpkP0Z0q4bW6WX86ALWPghIXyydUSs-qqC_zP" alt="Imagem de capa do card">
+                                            <div class="card-body">
+                                                <h5 class="card-title letra">Alunos da FATEC São Roque</h5>
+                                                <p class="card-text letra2">Página de autoria dos alunos da FATEC São Roque do 3º Semestre do curso de Sistemas para Internet, 2019.</p>
+                                            </div>
+                                        </div>                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- GRÁFICO 2 -->
+            <section class="mb-5 mt-3 corfundo">                
+                <div class="jumbotron jumbotron-fluid bk-escuro mt-5">
+                    <div class="container">
+                        <h2 class="display-4 lead ft-branca">Gráfico de Remuneração - Servidores Públicos - 2019</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1">
+                    </div>
+                    <div class="col-10 bg-white graph02">
+                        <!-- <img class="w-75" src="scripts/getGraph.php" alt="Gráfico de Remuneração - SERVIDORES PÚBLICOS" title="Gráfico de Remuneração - SERVIDORES PÚBLICOS"/> -->
+                            <div id="loader02"></div>
+                            <div id="columnchart_values" class="mt-2 mb-2 w-100">
+                        </div>
+                    </div>
+                    <div class="col-1">
+                    </div>
+                    <div class="col-12 pl-5 pr-5">
+                        <div class="mt-3">
+                            <p class="letra">O gráfico acima mostra os respectivos gastos do Centro Paula Souza, da FATEC e dos demais órgãos públicos.</p>                        
+                        </div>                        
+                    </div>
+                </div>                        
+            </section>            
+        </div>
+        <!-- FOOTER -->
+        <footer class="w-auto p-3">
+			<div class="row">
+				<div class="col-md-12">
+				</div>
+			</div>                
+        </footer>
+		<script src="scripts/script.js" async defer>
+		</script>
+	</body>
+</html>
